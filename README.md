@@ -1,4 +1,4 @@
-# Especificación del Subsistema 4: Vehículos
+# Especificación del Subsistema 2: Vehículos
 
 Integrantes del grupo:
 - Miriam Guindel Gómez
