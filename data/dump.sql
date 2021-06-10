@@ -1,0 +1,8 @@
+CREATE SCHEMA IF NOT EXISTS practica_aos;
+USE practica_aos;
+CREATE TABLE vehiculos(id INT AUTO_INCREMENT,clienteId INT NOT NULL,
+			matricula VARCHAR(10) NOT NULL,marca VARCHAR(20) NOT NULL ,
+			modelo VARCHAR(50) NOT NULL,color VARCHAR(20) NOT NULL,
+			anio INT NOT NULL, VIN VARCHAR(50) NOT NULL,PRIMARY KEY(id)) ;
+
+

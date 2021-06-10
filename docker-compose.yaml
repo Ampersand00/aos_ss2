@@ -1,0 +1,20 @@
+version: "3"
+services:
+  app:
+    image: swagger_server:2.1
+    container_name: server
+    restart: always
+    ports:
+      - 8080:8080
+    links:
+        - mysql
+  mysql:
+    image: mysql:8
+    container_name: db
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d/
+    environment:
+      MYSQL_DATABASE: practica_aos
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - "3306:3306"
