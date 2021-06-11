@@ -9,6 +9,10 @@ Integrantes del grupo:
 
 <br>
 
+[Enlace a la imagen del Subsistema 2](https://hub.docker.com/r/asdiaz/aos_subsistema2)
+
+<br>
+
 ## Introducción
 Este repositorio contiene los archivos necesarios para poner en marcha un servidor de nuestro subsistema, con el que se podrá interactuar a través de la interfaz de su especificación en Swagger UI. El servidor está basado en Python, utilizando Flask. El código se ha generado mediante la herramienta de [Swagger Codegen](https://github.com/swagger-api/swagger-codegen).
 
