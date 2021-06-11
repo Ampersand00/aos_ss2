@@ -789,8 +789,14 @@ components:
             - marca
             - matricula
             - modelo
+            - clientId
             type: object
             properties:
+              clientId:
+                type: integer
+                description: Identificador único del cliente que haya llevado el vehículo
+                  al taller.
+                format: int32
               matricula:
                 type: string
                 description: Matrícula del vehículo.
@@ -813,6 +819,7 @@ components:
                 description: Número de identificación del vehículo (Vehicle Identification
                   Number).
             example:
+              clientId: 2
               matricula: 7482-CJD
               marca: BMW
               modelo: 328i
