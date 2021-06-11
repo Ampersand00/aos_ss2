@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: swagger_server:2.1
+    image: aos/subsistema2:2.2
     container_name: server
     restart: always
     ports:
