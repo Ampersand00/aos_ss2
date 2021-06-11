@@ -25,7 +25,7 @@ PASS = os.getenv('BD_PASSWORD')
 DATABASE = os.getenv('BD_DATABASE')
 
 
-def taller_clienteId_get(client_id):  # noqa: E501
+def taller_clientid_get(client_id):  # noqa: E501
   # "" "Obtener los vehículos de un cliente concreto.
 
   #   Permite obtener un vehículo perteneciente a la lista de todos los vehículos de un cliente del taller.  # noqa: E501
@@ -127,7 +127,7 @@ def taller_vehiculo_post(body):
 
   #   :rtype: Vehiculo
   #   " ""
-    _clienteId = body['clienteId']
+    _clienteId = body['clientId']
     _matricula = body['matricula']
     _marca = body['marca']
     _modelo = body['modelo']
@@ -239,7 +239,7 @@ def taller_vehiculoid_put(body, vehiculo_id):
 
     # :rtype: Vehiculo
     # " "" 
-    _clienteId = body['clienteId']
+    _clienteId = body['clientId']
     _matricula = body['matricula']
     _marca = body['marca'] 
     _modelo = body['modelo'] 
