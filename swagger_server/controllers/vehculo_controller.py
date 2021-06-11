@@ -25,7 +25,7 @@ PASS = os.getenv('BD_PASSWORD')
 DATABASE = os.getenv('BD_DATABASE')
 
 
-def taller_clientid_get(client_id):  # noqa: E501
+def taller_clienteId_get(client_id):  # noqa: E501
   # "" "Obtener los vehículos de un cliente concreto.
 
   #   Permite obtener un vehículo perteneciente a la lista de todos los vehículos de un cliente del taller.  # noqa: E501
@@ -127,7 +127,7 @@ def taller_vehiculo_post(body):
 
   #   :rtype: Vehiculo
   #   " ""
-    _clientID = body['clientId']
+    _clienteId = body['clienteId']
     _matricula = body['matricula']
     _marca = body['marca']
     _modelo = body['modelo']
@@ -138,7 +138,7 @@ def taller_vehiculo_post(body):
         user=USER, password=PASS, host=HOST, database=DATABASE)
     cursor = cnx.cursor()
     query = ("INSERT INTO vehiculos(clienteID,matricula,marca,modelo,color,anio,VIN) VALUES(%s,%s, %s, %s, %s,%s, %s)")
-    values = (_clientID, _matricula, _marca, _modelo, _color, _anio, _vin)
+    values = (_clienteId, _matricula, _marca, _modelo, _color, _anio, _vin)
     cursor.execute(query, values)
     cnx.commit()
     select = ("SELECT * FROM vehiculos WHERE id=%s")
@@ -239,6 +239,7 @@ def taller_vehiculoid_put(body, vehiculo_id):
 
     # :rtype: Vehiculo
     # " "" 
+    _clienteId = body['clienteId']
     _matricula = body['matricula']
     _marca = body['marca'] 
     _modelo = body['modelo'] 
@@ -248,8 +249,8 @@ def taller_vehiculoid_put(body, vehiculo_id):
     intAnio = int(_anio)
     cnx = mysql.connector.connect (user = USER, password = PASS, host = HOST, database = DATABASE) 
     cursor = cnx.cursor()
-    values =(_matricula, _marca, _modelo, _color, intAnio, _vin,vehiculo_id)
-    cursor.execute("UPDATE vehiculos SET matricula=%s,marca=%s,modelo=%s,color=%s,anio=%s,VIN=%s WHERE id=%s;",
+    values =(_clienteId,_matricula, _marca, _modelo, _color, intAnio, _vin,vehiculo_id)
+    cursor.execute("UPDATE vehiculos SET clienteId=%s,matricula=%s,marca=%s,modelo=%s,color=%s,anio=%s,VIN=%s WHERE id=%s;",
    values)
 # cursor.execute(query,values)
     cnx.commit()
