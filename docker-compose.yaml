@@ -1,16 +1,16 @@
 version: "3"
 services:
-    app:
-        image: asdiaz/aos_subsistema2:2.4
-        container_name: server
+    app_subsistema2:
+        image: mguindel/subsistema2:2.5
+        container_name: server_subsistema2
         restart: always
         ports:
             - 8080:8080
         links:
-            - mysql
-    mysql:
+            - mysql_subsistema2
+    mysql_subsistema2:
         image: asdiaz/aos_bd:1.2
-        container_name: db
+        container_name: db_subsistema2
         environment:
             MYSQL_DATABASE: practica_aos
             MYSQL_ROOT_PASSWORD: 1234
