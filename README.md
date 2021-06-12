@@ -9,7 +9,7 @@ Integrantes del grupo:
 
 <br>
 
-[Enlace a la imagen del Subsistema 2](https://hub.docker.com/r/mguindel/subsistema2)
+[Enlace a la imagen del Subsistema 2](https://hub.docker.com/r/mguindel/aos_subsistema2)
 
 <br>
 
